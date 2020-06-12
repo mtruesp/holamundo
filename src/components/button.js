@@ -1,14 +1,18 @@
 import React from 'react'
 
 class Button extends React.Component{
-    constructor(){
+    constructor(props){
         super()
+    }
+    
+    componentDidMount(){
+        console.log('Boton creado')
     }
 
     render(){
         return (
-            <button class="ui primary button">
-                Comentar
+            <button onClick={this.props.func} class="ui primary button">
+                {this.props.text}
             </button>
         )
     }
