@@ -20,9 +20,23 @@ class Comments extends React.Component{
         console.log('Despues del renderizado')
     }
 
-    componentWillUnmount(){
-        console.log('Componente borrado')
+    componentWillReceiveProps(nextProps){
+        console.log('Recibir props', nextProps)
     }
+
+    componentWillUpdate(nextProps, nextState){
+        console.log('componente se va a actualizar', nextProps, nextState)
+    }
+
+    componentDidUpdate(prevProps, prevState){
+        console.log('componente se actualizo', prevProps, prevState)
+    }
+
+    componentWillUnmount(){
+        console.log('Componente se va a desmontar')
+    }
+
+
 
     render(){
         return(

@@ -11,7 +11,7 @@ class Button extends React.Component{
 
     render(){
         return (
-            <button onClick={this.props.func} class="ui primary button">
+            <button onClick={this.props.func} className="ui primary button">
                 {this.props.text}
             </button>
         )
